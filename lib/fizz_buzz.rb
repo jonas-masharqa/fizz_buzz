@@ -1,13 +1,17 @@
 
 def fizz_buzz(number)
-    if has_zero_remainder?(number, 15)
+
+    if number.class == String || number < 0
+        'insert positive number'
+
+    elsif has_zero_remainder?(number, 15)
         'fizz_buzz'
         
     elsif has_zero_remainder?(number, 5)
-        'fizz'
+        'buzz'
 
     elsif has_zero_remainder?(number, 3)
-        'buzz'
+        'fizz'
 
     else
         number
